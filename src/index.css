@@ -18,12 +18,12 @@
   --text-muted: #a1a1aa;
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-}
+} */
 
 body {
   background-color: var(--dark);
@@ -103,11 +103,11 @@ h3,
   padding: 5rem 1.5rem;
 } */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .section-padding {
     padding: 6rem 2rem;
   }
-}
+} */
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
