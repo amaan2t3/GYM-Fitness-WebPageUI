@@ -6,12 +6,12 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const transformations = [
-    { id: 1, src: "https://picsum.photos/seed/gym1/800/800", title: "Strength Training", span: "md:col-span-2 md:row-span-2" },
-    { id: 2, src: "https://picsum.photos/seed/gym2/800/800", title: "Core Workout", span: "col-span-1 row-span-1" },
-    { id: 3, src: "https://picsum.photos/seed/gym3/800/800", title: "Cardio Focus", span: "col-span-1 row-span-1" },
-    { id: 4, src: "https://picsum.photos/seed/gym4/800/800", title: "Personal Training", span: "col-span-1 row-span-2" },
-    { id: 5, src: "https://picsum.photos/seed/gym5/800/800", title: "Yoga Balance", span: "col-span-1 row-span-1" },
-    { id: 6, src: "https://picsum.photos/seed/gym6/800/800", title: "CrossFit", span: "col-span-1 row-span-1" }
+    { id: 1, src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80", title: "Strength Training", span: "md:col-span-2 md:row-span-2" },
+    { id: 2, src: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80", title: "Core Workout", span: "col-span-1 row-span-1" },
+    { id: 3, src: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80", title: "Cardio Focus", span: "col-span-1 row-span-1" },
+    { id: 4, src: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80", title: "Personal Training", span: "col-span-1 row-span-2" },
+    { id: 5, src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80", title: "Yoga Balance", span: "col-span-1 row-span-1" },
+    { id: 6, src: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80", title: "CrossFit", span: "col-span-1 row-span-1" }
   ]
 
   return (

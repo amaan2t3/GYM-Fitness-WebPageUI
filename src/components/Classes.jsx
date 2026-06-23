@@ -9,7 +9,7 @@ const classes = [
     intensity: 'Strength & Power',
     schedule: 'Mon, Wed, Fri - 6:00 PM',
     badge: 'Build Muscle',
-    image: 'https://picsum.photos/seed/class1/500/500'
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=500&q=80'
   },
   {
     title: 'Cardio Fitness',
@@ -17,7 +17,7 @@ const classes = [
     intensity: 'High Intensity',
     schedule: 'Tue, Thu - 7:00 AM',
     badge: 'Burn Fat',
-    image: 'https://picsum.photos/seed/class2/500/500'
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=80'
   },
   {
     title: 'CrossFit',
@@ -25,7 +25,7 @@ const classes = [
     intensity: 'Extreme Conditioning',
     schedule: 'Mon, Wed, Fri - 6:00 AM',
     badge: 'Endurance',
-    image: 'https://picsum.photos/seed/class3/500/500'
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=500&q=80'
   },
   {
     title: 'Yoga',
@@ -33,7 +33,7 @@ const classes = [
     intensity: 'Flexibility & Balance',
     schedule: 'Sat, Sun - 9:00 AM',
     badge: 'Recovery',
-    image: 'https://picsum.photos/seed/class4/500/500'
+    image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=500&q=80'
   },
   {
     title: 'Bodybuilding',
@@ -41,7 +41,7 @@ const classes = [
     intensity: 'Hypertrophy Focus',
     schedule: 'Mon - Sat, Flexible',
     badge: 'Pro Level',
-    image: 'https://picsum.photos/seed/class5/500/500'
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=500&q=80'
   },
   {
     title: 'Personal Training',
@@ -49,7 +49,7 @@ const classes = [
     intensity: 'Customized',
     schedule: 'By Appointment',
     badge: '1-on-1',
-    image: 'https://picsum.photos/seed/class6/500/500'
+    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=500&q=80'
   }
 ]
 
