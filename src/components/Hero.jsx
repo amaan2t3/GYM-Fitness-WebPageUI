@@ -29,35 +29,37 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Forge Your{' '}
-              <span className="gradient-text">Strongest Self</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 uppercase">
+              <span className="gradient-text">Transform</span> Your Body,
               <br />
-              Beyond Limits
+              <span className="text-white">Transform Your Life</span>
             </h1>
             <p className="text-gray-300 text-lg mb-8 max-w-lg">
-              Elite coaching, premium equipment, and a community that pushes you to become the strongest version of you.
+              Experience the ultimate fitness journey with state-of-the-art equipment, expert trainers, and a supportive community to help you crush your goals.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-8">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto justify-center bg-primary hover:bg-orange-500 text-dark px-8 py-3 rounded-full font-semibold transition-all flex items-center gap-2"
-                onClick={scrollToTools}
+                className="w-full sm:w-auto justify-center bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg flex items-center gap-2"
+                onClick={() => {
+                  const pricingSection = document.querySelector('#pricing')
+                  if (pricingSection) pricingSection.scrollIntoView({ behavior: 'smooth' })
+                }}
               >
-                Start 7-Day Trial <FaArrowRight />
+                Join Now <FaArrowRight />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto justify-center border-2 border-primary text-primary hover:bg-primary hover:text-dark px-8 py-3 rounded-full font-semibold transition-all"
+                className="w-full sm:w-auto justify-center border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg"
                 onClick={() => {
                   const classesSection = document.querySelector('#classes')
                   if (classesSection) classesSection.scrollIntoView({ behavior: 'smooth' })
                 }}
               >
-                Explore Classes
+                Free Trial
               </motion.button>
             </div>
 
@@ -98,7 +100,13 @@ const Hero = () => {
             <div className="bg-primary/10 rounded-lg p-3 text-center mb-4">
               <code className="text-primary font-mono text-lg">FORGE30</code>
             </div>
-            <button className="w-full bg-primary hover:bg-orange-500 text-dark px-6 py-3 rounded-full font-semibold transition-all">
+            <button 
+              className="w-full bg-primary hover:bg-orange-500 text-dark px-6 py-3 rounded-full font-semibold transition-all"
+              onClick={() => {
+                const pricingSection = document.querySelector('#pricing')
+                if (pricingSection) pricingSection.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
               Claim Deal
             </button>
           </motion.div>

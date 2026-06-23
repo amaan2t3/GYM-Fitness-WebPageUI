@@ -4,28 +4,52 @@ import { FaClock, FaCalendarAlt } from 'react-icons/fa'
 
 const classes = [
   {
-    title: '🔥 Inferno HIIT',
+    title: 'Weight Training',
+    duration: '60 min',
+    intensity: 'Strength & Power',
+    schedule: 'Mon, Wed, Fri - 6:00 PM',
+    badge: 'Build Muscle',
+    image: 'https://picsum.photos/seed/class1/500/500'
+  },
+  {
+    title: 'Cardio Fitness',
     duration: '45 min',
     intensity: 'High Intensity',
-    schedule: 'Mon, Wed, Fri - 7:00 AM',
-    badge: 'Full Body Burn',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDmiBMNzuEXupuKV0m9fKXH933lkud0K9Oha3NMY_9aA&s'
+    schedule: 'Tue, Thu - 7:00 AM',
+    badge: 'Burn Fat',
+    image: 'https://picsum.photos/seed/class2/500/500'
   },
   {
-    title: '🏋️ Strength Foundations',
-    duration: '60 min',
-    intensity: 'Power Lifting',
-    schedule: 'Tue, Thu - 5:30 PM',
-    badge: 'Build Muscle',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
-  },
-  {
-    title: '🧘 Recovery & Mobility',
+    title: 'CrossFit',
     duration: '50 min',
-    intensity: 'Stretch & Flow',
+    intensity: 'Extreme Conditioning',
+    schedule: 'Mon, Wed, Fri - 6:00 AM',
+    badge: 'Endurance',
+    image: 'https://picsum.photos/seed/class3/500/500'
+  },
+  {
+    title: 'Yoga',
+    duration: '60 min',
+    intensity: 'Flexibility & Balance',
     schedule: 'Sat, Sun - 9:00 AM',
-    badge: 'Active Recovery',
-    image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+    badge: 'Recovery',
+    image: 'https://picsum.photos/seed/class4/500/500'
+  },
+  {
+    title: 'Bodybuilding',
+    duration: '90 min',
+    intensity: 'Hypertrophy Focus',
+    schedule: 'Mon - Sat, Flexible',
+    badge: 'Pro Level',
+    image: 'https://picsum.photos/seed/class5/500/500'
+  },
+  {
+    title: 'Personal Training',
+    duration: '60 min',
+    intensity: 'Customized',
+    schedule: 'By Appointment',
+    badge: '1-on-1',
+    image: 'https://picsum.photos/seed/class6/500/500'
   }
 ]
 
@@ -40,7 +64,7 @@ const Classes = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Signature Classes</span>
+            Fitness <span className="gradient-text">Programs</span>
           </h2>
         </motion.div>
 

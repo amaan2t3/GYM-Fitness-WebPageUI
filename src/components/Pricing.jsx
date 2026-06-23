@@ -4,24 +4,24 @@ import { FaCheck } from 'react-icons/fa'
 
 const plans = [
   {
-    name: 'Starter',
+    name: 'Basic Plan',
     price: 1500,
     period: 'month',
-    features: ['Gym access 6am-10pm', '2 Group Classes/week', 'Locker room access'],
+    features: ['Gym Access', 'Locker Facility'],
     popular: false
   },
   {
-    name: `Amaan's Pro`,
+    name: 'Premium Plan',
     price: 3000,
     period: 'month',
-    features: ['24/7 Unlimited Access', 'Unlimited Classes + Guest Pass', '1 Personal Training/mo', 'Recovery Lounge Access'],
+    features: ['Personal Trainer', 'Diet Plan', 'All Classes'],
     popular: true
   },
   {
-    name: 'Annual',
-    price: 15000,
-    period: 'year',
-    features: ['All Pro Benefits', '2 Months Free', 'Exclusive Merch Pack'],
+    name: 'Elite Plan',
+    price: 5000,
+    period: 'month',
+    features: ['VIP Support', 'Custom Workout Plans', 'Unlimited Access'],
     popular: false
   }
 ]

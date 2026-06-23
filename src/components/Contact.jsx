@@ -38,7 +38,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-gray-400"> Amaan's GYM, parshan chowk skardu.</p>
+                  <p className="text-gray-400"> PowerFit Gym, Main Street, Metropolis.</p>
                 </div>
               </div>
 

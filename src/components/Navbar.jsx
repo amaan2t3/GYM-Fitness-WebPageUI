@@ -107,8 +107,8 @@ const Navbar = () => {
               </div>
               <div className="relative">
                 <span className="text-2xl font-black tracking-tighter">
-                  <span className="gradient-text">Amaan's</span>
-                  <span className="text-white group-hover:text-primary transition-colors duration-300">GYM</span>
+                  <span className="gradient-text">PowerFit</span>
+                  <span className="text-white group-hover:text-primary transition-colors duration-300"> GYM</span>
                 </span>
                 <motion.div
                   className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-transparent"

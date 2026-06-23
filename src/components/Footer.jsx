@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <FaDumbbell className="text-primary text-2xl" />
-              <span className="text-2xl font-bold gradient-text">Amaan's GYM</span>
+              <span className="text-2xl font-bold gradient-text">PowerFit Gym</span>
             </div>
             <p className="text-gray-400 text-sm">
               Elite fitness studio built for warriors who want real results. Strength, community, evolution.
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center pt-8 border-t border-gray-800">
-          <p className="text-gray-500 text-sm">© 2025 Amaan's GYM — Built for the relentless. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2025 PowerFit Gym — Built for the relentless. All rights reserved.</p>
         </div>
       </div>
     </footer>
