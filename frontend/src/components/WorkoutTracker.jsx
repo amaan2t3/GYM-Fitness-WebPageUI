@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useMemo, useState, useEffect } from 'react'
+import { motion as Motion, AnimatePresence } from 'framer-motion'
 import { FaPlus, FaTrash, FaCheck, FaClock, FaFire } from 'react-icons/fa'
 
 const WorkoutTracker = () => {
@@ -9,20 +9,17 @@ const WorkoutTracker = () => {
     })
     const [newWorkout, setNewWorkout] = useState({ name: '', sets: '', reps: '', weight: '' })
     const [activeTab, setActiveTab] = useState('today')
-    const [calories, setCalories] = useState(0)
 
     useEffect(() => {
-        // Save workouts to localStorage
         localStorage.setItem('workouts', JSON.stringify(workouts))
-        // Calculate total calories burned (simple calculation)
-        const totalCalories = workouts.reduce((sum, w) => {
+    }, [workouts])
+
+    const calories = useMemo(() => workouts.reduce((sum, w) => {
             const sets = parseInt(w.sets) || 0
             const reps = parseInt(w.reps) || 0
             const weight = parseFloat(w.weight) || 0
             return sum + (sets * reps * weight * 0.01) // Simple calorie estimation
-        }, 0)
-        setCalories(totalCalories)
-    }, [workouts])
+        }, 0), [workouts])
 
     const addWorkout = () => {
         if (newWorkout.name && newWorkout.sets && newWorkout.reps) {
@@ -58,7 +55,7 @@ const WorkoutTracker = () => {
     const displayedWorkouts = activeTab === 'today' ? todayWorkouts : allWorkouts
 
     return (
-        <motion.div
+        <Motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -107,7 +104,7 @@ const WorkoutTracker = () => {
                 </div>
                 <button
                     onClick={addWorkout}
-                    className="w-full bg-primary hover:bg-orange-500 text-dark py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-primary hover:bg-primary-hover text-dark py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
                 >
                     <FaPlus /> Add Exercise
                 </button>
@@ -140,7 +137,7 @@ const WorkoutTracker = () => {
                         <p className="text-center text-gray-500 py-8">No workouts logged yet. Add your first exercise!</p>
                     ) : (
                         displayedWorkouts.map((workout) => (
-                            <motion.div
+                            <Motion.div
                                 key={workout.id}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -172,17 +169,17 @@ const WorkoutTracker = () => {
                                     </button>
                                     <button
                                         onClick={() => deleteWorkout(workout.id)}
-                                        className="p-2 hover:bg-red-500/20 rounded-lg transition-colors"
+                                        className="p-2 hover:bg-ladies-accent/20 rounded-lg transition-colors"
                                     >
-                                        <FaTrash className="text-red-500" />
+                                        <FaTrash className="text-ladies-primary" />
                                     </button>
                                 </div>
-                            </motion.div>
+                            </Motion.div>
                         ))
                     )}
                 </AnimatePresence>
             </div>
-        </motion.div>
+        </Motion.div>
     )
 }
 

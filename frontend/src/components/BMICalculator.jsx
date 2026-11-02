@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 const BMICalculator = () => {
@@ -20,16 +20,16 @@ const BMICalculator = () => {
       let color = ''
       if (bmiValue < 18.5) {
         categoryText = 'Underweight'
-        color = '#60a5fa'
+        color = '#668875'
       } else if (bmiValue < 25) {
         categoryText = 'Normal weight'
-        color = '#4ade80'
+        color = '#174B3A'
       } else if (bmiValue < 30) {
         categoryText = 'Overweight'
-        color = '#fbbf24'
+        color = '#D9B77E'
       } else {
         categoryText = 'Obese'
-        color = '#f87171'
+        color = '#36785C'
       }
       setCategory({ text: categoryText, color })
 
@@ -44,14 +44,14 @@ const BMICalculator = () => {
   }
 
   const getBMIColor = (bmiValue) => {
-    if (bmiValue < 18.5) return '#60a5fa'
-    if (bmiValue < 25) return '#4ade80'
-    if (bmiValue < 30) return '#fbbf24'
-    return '#f87171'
+    if (bmiValue < 18.5) return '#668875'
+    if (bmiValue < 25) return '#174B3A'
+    if (bmiValue < 30) return '#D9B77E'
+    return '#36785C'
   }
 
   return (
-    <motion.div
+    <Motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -85,7 +85,7 @@ const BMICalculator = () => {
         <div className="md:col-span-2">
           <button
             onClick={calculateBMI}
-            className="w-full bg-primary hover:bg-orange-500 text-dark py-3 rounded-lg font-semibold transition-all"
+            className="w-full bg-primary hover:bg-primary-hover text-dark py-3 rounded-lg font-semibold transition-all"
           >
             Calculate BMI
           </button>
@@ -93,7 +93,7 @@ const BMICalculator = () => {
       </div>
 
       {bmi && (
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="bg-dark rounded-lg p-4 mb-6"
@@ -122,7 +122,7 @@ const BMICalculator = () => {
               ></div>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
       )}
 
       {/* BMI History Chart */}
@@ -131,19 +131,19 @@ const BMICalculator = () => {
           <h4 className="font-semibold mb-3">BMI History</h4>
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={history}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-              <XAxis dataKey="date" stroke="#888" />
-              <YAxis stroke="#888" domain={['auto', 'auto']} />
+              <CartesianGrid strokeDasharray="3 3" stroke="#E2E9E3" />
+              <XAxis dataKey="date" stroke="#879189" />
+              <YAxis stroke="#879189" domain={['auto', 'auto']} />
               <Tooltip
-                contentStyle={{ backgroundColor: '#1a1d22', border: 'none', borderRadius: '8px' }}
-                labelStyle={{ color: '#fff' }}
+                contentStyle={{ backgroundColor: '#FFFFFF', border: '1px solid #E2E9E3', borderRadius: '8px' }}
+                labelStyle={{ color: '#202B25' }}
               />
-              <Line type="monotone" dataKey="bmi" stroke="#f2613a" strokeWidth={2} dot={{ fill: '#f2613a' }} />
+              <Line type="monotone" dataKey="bmi" stroke="#174B3A" strokeWidth={2} dot={{ fill: '#36785C' }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
       )}
-    </motion.div>
+    </Motion.div>
   )
 }
 

@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import { FaDumbbell, FaHeart, FaSpa } from 'react-icons/fa'
 import { FaChalkboardUser } from 'react-icons/fa6'
 
@@ -16,7 +16,7 @@ const Features = () => {
   return (
     <section className="py-20 bg-darker">
       <div className="container mx-auto px-4">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,11 +25,11 @@ const Features = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Premium Facilities</span>
           </h2>
-        </motion.div>
+        </Motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <Motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const Features = () => {
               <feature.icon className="text-primary text-4xl mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
